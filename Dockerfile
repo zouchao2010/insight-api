@@ -4,7 +4,8 @@ WORKDIR /opt
 RUN apt-get update
 RUN apt-get install -y git
 RUN apt-get clean
-RUN git clone https://github.com/bitpay/insight-api.git && cd insight-api
+RUN git clone https://github.com/bitpay/insight-api.git
+RUN cd insight-api
 RUN npm install
 
 VOLUME /var/lib/insight-api/data
