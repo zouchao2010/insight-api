@@ -15,7 +15,7 @@ VOLUME /var/lib/insight-api/data
 # production|test|development
 ENV NODE_ENV                        development
 ENV BITCOIND_HOST                   127.0.0.1
-ENV BITCOIND_P2P_HOST               $BITCOIND_HOST
+ENV BITCOIND_P2P_HOST               127.0.0.1
 ENV BITCOIND_USER                   user
 ENV BITCOIND_PASS                   pass
 ENV BITCOIND_DATADIR                /var/lib/insight-api/data/bitcoind
@@ -26,10 +26,11 @@ ENV INSIGHT_PORT                    3000
 ENV INSIGHT_DB                      /var/lib/insight-api/data/db
 ENV INSIGHT_SAFE_CONFIRMATIONS      6
 ENV INSIGHT_IGNORE_CACHE            0
+ENV INSIGHT_FORCE_RPC_SYNC          0
 ENV ENABLE_CURRENCYRATES            true
 ENV ENABLE_RATELIMITER              true
 ENV LOGGER_LEVEL                    info
-ENV ENABLE_HTTPS                    true
+ENV ENABLE_HTTPS                    false
 ENV ENABLE_EMAILSTORE               true
 ENV INSIGHT_EMAIL_CONFIRM_HOST      https://insight-api.bitpay.com
 
