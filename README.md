@@ -10,7 +10,7 @@ docker run  --name insight-api \
             -e BITCOIND_PASS=pass \
             -e INSIGHT_PUBLIC_PATH=public \
             -e ENABLE_HTTPS=false \
-            -e INSIGHT_FORCE_RPC_SYNC = 1 \
+            -e INSIGHT_FORCE_RPC_SYNC=1 \
             -d zouchao2010/insight-api
 
 
@@ -24,6 +24,6 @@ docker run  --name insight-api \
             -e BITCOIND_PASS=pass \
             -e INSIGHT_PUBLIC_PATH=public \
             -e ENABLE_HTTPS=false \
-            -e INSIGHT_FORCE_RPC_SYNC = 1 \
+            -e INSIGHT_FORCE_RPC_SYNC=1 \
             -it --rm zouchao2010/insight-api
 ```
