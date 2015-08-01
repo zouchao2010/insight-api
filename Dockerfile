@@ -1,9 +1,13 @@
 FROM node:0.10
 
 WORKDIR /opt
-RUN apt-get update
-RUN apt-get install -y git
-RUN apt-get clean
+RUN apt-get update \
+    && apt-get install -y git \
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && apt-get autoclean -y \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN git clone https://github.com/bitpay/insight-api.git
 
 WORKDIR /opt/insight-api
