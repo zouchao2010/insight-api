@@ -15,6 +15,7 @@ docker pull zouchao2010/insight-api
 ## run(创建并运行一个容器，退出时删除容器)
 ```shell
 docker run  --name insight-api \
+            -h insight-api \
             -p 3000:3000 \
             -v /data/insight-api:/var/lib/insight-api/data \
             -e BITCOIND_HOST=x.x.x.x \
@@ -32,6 +33,7 @@ docker run  --name insight-api \
 ## run(创建并运行一个容器，以守护进程方式)
 ```shell
 docker run  --name insight-api \
+            -h insight-api \
             -p 3000:3000 \
             -v /data/insight-api:/var/lib/insight-api/data \
             -e BITCOIND_HOST=x.x.x.x \
