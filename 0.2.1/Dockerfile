@@ -30,6 +30,7 @@ ENV BITCOIND_DATADIR                /var/lib/insight-api/data/bitcoind
 
 # livenet|testnet
 ENV INSIGHT_NETWORK                 testnet
+# 0.2.1无该环境变量
 ENV INSIGHT_PORT                    3000
 ENV INSIGHT_DB                      /var/lib/insight-api/data/db
 ENV INSIGHT_SAFE_CONFIRMATIONS      6
@@ -45,4 +46,5 @@ ENV INSIGHT_EMAIL_CONFIRM_HOST      https://insight-api.bitpay.com
 WORKDIR /opt/insight-api
 
 EXPOSE 3000
+EXPOSE 3001
 CMD ["node", "insight.js"]
