@@ -20,6 +20,9 @@ RUN wget https://github.com/bitpay/insight-api/archive/v$VERSION.tar.gz \
 
 VOLUME /var/lib/insight-api/data
 
+RUN mkdir -p /var/lib/insight-api/data/db/testnet \
+    && mkdir -p /var/lib/insight-api/data/db/livenet
+
 # production|test|development
 ENV NODE_ENV                        development
 ENV BITCOIND_HOST                   127.0.0.1
