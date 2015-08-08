@@ -10,13 +10,13 @@ RUN apt-get update \
     && apt-get autoclean -y \
     && rm -rf /var/lib/apt/lists/*
 
-#insall insight-api
+#install insight-api
 RUN wget https://github.com/bitpay/insight-api/archive/v$VERSION.tar.gz \
     && tar -zxvf v$VERSION.tar.gz \
     && rm -rf v$VERSION.tar.gz \
     && mv insight-api-$VERSION insight-api \
     && cd insight-api \
-    && npm insall
+    && npm install
 
 VOLUME /var/lib/insight-api/data
 
