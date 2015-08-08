@@ -15,7 +15,6 @@ RUN npm install
 
 VOLUME /var/lib/insight-api/data
 
-
 # production|test|development
 ENV NODE_ENV                        development
 ENV BITCOIND_HOST                   127.0.0.1
