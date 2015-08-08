@@ -12,6 +12,13 @@ docker pull zouchao2010/insight-api
 
 ```
 
+## mkdir(创建DB目录)
+```shell
+mkdir -p /data/insight-api/db/testnet
+mkdir -p /data/insight-api/db/livenet
+
+```
+
 ## run(创建并运行一个容器，退出时删除容器)
 ```shell
 docker run  --name insight-api \
@@ -59,18 +66,3 @@ docker start|stop|restart insight-api
 docker exec -it insight-api /bin/bash
 
 ```
-
-
-docker run  --name insight-api_0.2.1 \
-            -h insight-api_0.2.1 \
-            -p 3010:3000 \
-            -v /data/insight-api_0.2.1:/var/lib/insight-api/data \
-            -e BITCOIND_HOST=10.117.56.72 \
-            -e BITCOIND_P2P_HOST=10.117.56.72 \
-            -e INSIGHT_NETWORK=testnet \
-            -e BITCOIND_USER=user \
-            -e BITCOIND_PASS=pass \
-            -e INSIGHT_PUBLIC_PATH=public \
-            -e ENABLE_HTTPS=false \
-            -e INSIGHT_FORCE_RPC_SYNC=1 \
-            -it --rm zouchao2010/insight-api:0.2.1
